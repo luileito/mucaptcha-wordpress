@@ -70,7 +70,7 @@ function mucaptcha_add_error( &$err, $response ) {
   } else {
     // Some error happened while solving the challenge.
     $msg  = sprintf( __( '<strong>μcaptcha error</strong>: %s.', 'mucaptcha' ), $response['error_code'] );
-    $msg .= sprintf( __( '<a href="%s">More info</a>', 'mucaptcha' ), 'https://api.mucaptcha.com/v1/docs/#error-codes' );
+    $msg .= ' ' . sprintf( __( '<a href="%s">More info</a>', 'mucaptcha' ), 'https://api.mucaptcha.com/v1/docs/#error-codes' );
   }
   $err->add( 'mucaptcha_error', $msg );
 }
