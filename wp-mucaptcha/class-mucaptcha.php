@@ -1,18 +1,23 @@
 <?php
 /**
  * μcaptcha PHP class.
- * @version 1.0.0
+ * @version 1.1.0
  */
 class MuCAPTCHA {
 
   private $secret;
+  protected $referer;
 
-  function __construct($secret)
+  function __construct($secret, $referer)
   {
     if (empty($secret)) {
       throw new Exception("No secret key provided. Please register at https://api.mucaptcha.com");
     }
+    if (empty($referer)) {
+      throw new Exception("No referer provided. Please provide your website URL.");
+    }
     $this->secret = $secret;
+    $this->referer = $referer;
   }
 
   function verify($challenge, $strokes, $remote_ip = NULL)
@@ -20,6 +25,7 @@ class MuCAPTCHA {
     $url = "https://api.mucaptcha.com/v1/verify";
     $fields = array(
       'secret'    => $this->secret,
+      'referer'   => $this->referer,
       'challenge' => $challenge,
       'strokes'   => $strokes,
       'ip'        => $remote_ip,

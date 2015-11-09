@@ -107,7 +107,8 @@ function mucaptcha_verify() {
     $challenge = $_POST['mucaptcha-challenge'];
     $strokes   = $_POST['mucaptcha-strokes'];
     $secret    = get_option( 'mucaptcha_secret_key' );
-    $mucaptcha = new MuCAPTCHA( $secret );
+    $referer   = site_url();
+    $mucaptcha = new MuCAPTCHA( $secret, $referer );
     return $mucaptcha->verify( $challenge, $strokes );
   }
   // Otherwise return the expected verification format.
