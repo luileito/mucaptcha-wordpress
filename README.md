@@ -1,2 +1,5 @@
 # mucaptcha-wordpress
-μcaptcha plugin for WordPress
+
+This is the μcaptcha plugin for WordPress.
+
+See `wp-mucaptcha/readme.txt` for more details.
