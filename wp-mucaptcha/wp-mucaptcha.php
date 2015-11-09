@@ -64,8 +64,14 @@ function mucaptcha_localize() {
 
 // Append error message to the current stack (which is passed in by reference, btw).
 function mucaptcha_add_error( &$err, $response ) {
-  $msg  = sprintf( __( '<strong>μcaptcha error</strong>: %s.', 'mucaptcha' ), $response['error_code'] );
-  $msg .= sprintf( __( '<a href="%s">More info</a>', 'mucaptcha' ), 'https://api.mucaptcha.com/v1/docs/#error-codes' );
+  if ($response['error_code'] == NULL) {
+    // The user didn't pass the challenge.
+    $msg  = __( '<strong>error</strong>: You didn\'t pass the μcaptcha.', 'mucaptcha' );
+  } else {
+    // Some error happened while solving the challenge.
+    $msg  = sprintf( __( '<strong>μcaptcha error</strong>: %s.', 'mucaptcha' ), $response['error_code'] );
+    $msg .= sprintf( __( '<a href="%s">More info</a>', 'mucaptcha' ), 'https://api.mucaptcha.com/v1/docs/#error-codes' );
+  }
   $err->add( 'mucaptcha_error', $msg );
 }
 
