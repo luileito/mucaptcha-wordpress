@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-08 19:40+0100\n"
+"POT-Creation-Date: 2015-11-09 19:26+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,25 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: mucaptcha.php:27
-msgid "Draw the math symbols:"
-msgstr "Dibuixa els símbols matemàtics:"
-
-#: mucaptcha.php:55 admin/form.php:3
-msgid "μcaptcha configuration"
-msgstr "configuració de μcaptcha"
-
-#: mucaptcha.php:65
-#, php-format
-msgid "<strong>μcaptcha error</strong>: %s."
-msgstr "<strong>error de μcaptcha</strong>: %s."
-
-#: mucaptcha.php:66
-#, php-format
-msgid "<a href=\"%s\">More info</a>"
-msgstr "<a href=\"%s\">Més info</a>"
-
-#: admin/index.php:5
+#: ../admin/index.php:5
 #, php-format
 msgid ""
 "<a href=\"%s\">Please install the PHP cURL lib</a>. Otherwise the submitted "
@@ -44,7 +26,11 @@ msgstr ""
 "<a href=\"%s\">Has d'instal·lar la libreria cURL de PHP</a>. Si no, els "
 "μcaptchas no es podran validar."
 
-#: admin/form.php:9
+#: ../admin/form.php:3 ../wp-mucaptcha.php:56
+msgid "μcaptcha configuration"
+msgstr "configuració de μcaptcha"
+
+#: ../admin/form.php:9
 #, php-format
 msgid ""
 "Please enter your public and secret API keys. <a href=\"%s\">Get them here</"
@@ -53,86 +39,104 @@ msgstr ""
 "Escriu les teuas claus pública i secreta. <a href=\"%s\">Aconsegueix-les "
 "aquí</a>."
 
-#: admin/form.php:17
+#: ../admin/form.php:17
 msgid "General settings"
 msgstr "Ajustos generals"
 
-#: admin/form.php:22
+#: ../admin/form.php:22
 msgid "Public key"
 msgstr "Clau pública"
 
-#: admin/form.php:33
+#: ../admin/form.php:33
 msgid "Secret key"
 msgstr "Clau secreta"
 
-#: admin/form.php:43
+#: ../admin/form.php:43
 msgid "Display"
 msgstr "Mostrar"
 
-#: admin/form.php:49
+#: ../admin/form.php:49
 msgid "When anonymous users comment"
 msgstr "Quan usuaris anònims comenten"
 
-#: admin/form.php:55
+#: ../admin/form.php:55
 msgid "When logged users comment"
 msgstr "Quan usuaris registrats comenten"
 
-#: admin/form.php:61
+#: ../admin/form.php:61
 msgid "When someone logs in"
 msgstr "Quan algú ingressa"
 
-#: admin/form.php:67
+#: ../admin/form.php:67
 msgid "When someone registers"
 msgstr "Quan algú es registra"
 
-#: admin/form.php:73
+#: ../admin/form.php:73
 msgid "Appearance settings"
 msgstr "Ajustos de visualització"
 
-#: admin/form.php:78
+#: ../admin/form.php:78
 msgid "Accompanying text"
 msgstr "Text explicatiu"
 
-#: admin/form.php:85
+#: ../admin/form.php:85
 msgid "e.g. Draw the math symbols:"
 msgstr "p.e. Dibuixa els símbols matemàtics"
 
-#: admin/form.php:91
+#: ../admin/form.php:91
 msgid "Scope"
 msgstr "Abast"
 
-#: admin/form.php:97
+#: ../admin/form.php:97
 msgid "Display only on touch-capable devices"
 msgstr "Mostrar només en dispostius amb pantalla tàctil"
 
-#: admin/form.php:104
+#: ../admin/form.php:104
 msgid "Line color"
 msgstr "Color de línia"
 
-#: admin/form.php:111
+#: ../admin/form.php:111
 msgid "e.g. red (default), #FFF or any valid CSS color"
 msgstr "p.e. red (per defecte), #FFF o qualsevol color CSS vàlid"
 
-#: admin/form.php:118
+#: ../admin/form.php:118
 msgid "Line width"
 msgstr "Ample de línia"
 
-#: admin/form.php:125
+#: ../admin/form.php:125
 msgid "e.g. 3 (default)"
 msgstr "p.e. 3 (per defecte)"
 
-#: admin/form.php:132
+#: ../admin/form.php:132
 msgid "Background color"
 msgstr "Color de fons"
 
-#: admin/form.php:139
+#: ../admin/form.php:139
 msgid "e.g. white (default), #F00 or any valid CSS color"
 msgstr "p.e. blanc (per defecte), #F00 o qualsevol color CSS vàlid"
 
-#: admin/form.php:146
+#: ../admin/form.php:146
 msgid "Save"
 msgstr "Salva"
 
-#: admin/save.php:48
+#: ../admin/save.php:48
 msgid "Configuration saved."
 msgstr "Configuració guardada."
+
+#: ../wp-mucaptcha.php:28
+msgid "Draw the math symbols:"
+msgstr "Dibuixa els símbols matemàtics:"
+
+#: ../wp-mucaptcha.php:69
+msgid "<strong>error</strong>: You didn't pass the μcaptcha."
+msgstr "<strong>error</strong>: No has passat el μcaptcha."
+
+#: ../wp-mucaptcha.php:72
+#, php-format
+msgid "<strong>μcaptcha error</strong>: %s."
+msgstr "<strong>error de μcaptcha</strong>: %s."
+
+#: ../wp-mucaptcha.php:73
+#, php-format
+msgid "<a href=\"%s\">More info</a>"
+msgstr "<a href=\"%s\">Més info</a>"

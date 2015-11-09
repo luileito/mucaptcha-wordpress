@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-09 14:31+0100\n"
+"POT-Creation-Date: 2015-11-09 19:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,24 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: ../mucaptcha.php:28
-msgid "Draw the math symbols:"
-msgstr "Dibuja los símbolos matemáticos:"
-
-#: ../mucaptcha.php:56 ../admin/form.php:3
-msgid "μcaptcha configuration"
-msgstr "configuración de μcaptcha"
-
-#: ../mucaptcha.php:67
-#, php-format
-msgid "<strong>μcaptcha error</strong>: %s."
-msgstr "<strong>error de μcaptcha</strong>: %s."
-
-#: ../mucaptcha.php:68
-#, php-format
-msgid "<a href=\"%s\">More info</a>"
-msgstr "<a href=\"%s\">Más info</a>"
 
 #: ../admin/index.php:5
 #, php-format
@@ -43,6 +25,10 @@ msgid ""
 msgstr ""
 "<a href=\"%s\">Debes instalar la librería cURL de PHP</a>. Si no, los "
 "μcaptchas no se podrán validar."
+
+#: ../admin/form.php:3 ../wp-mucaptcha.php:56
+msgid "μcaptcha configuration"
+msgstr "configuración de μcaptcha"
 
 #: ../admin/form.php:9
 #, php-format
@@ -135,3 +121,21 @@ msgstr "Guardar"
 #: ../admin/save.php:48
 msgid "Configuration saved."
 msgstr "Configuración guardada."
+
+#: ../wp-mucaptcha.php:28
+msgid "Draw the math symbols:"
+msgstr "Dibuja los símbolos matemáticos:"
+
+#: ../wp-mucaptcha.php:69
+msgid "<strong>error</strong>: You didn't pass the μcaptcha."
+msgstr "<strong>error</strong>: No has pasado el μcaptcha."
+
+#: ../wp-mucaptcha.php:72
+#, php-format
+msgid "<strong>μcaptcha error</strong>: %s."
+msgstr "<strong>error de μcaptcha</strong>: %s."
+
+#: ../wp-mucaptcha.php:73
+#, php-format
+msgid "<a href=\"%s\">More info</a>"
+msgstr "<a href=\"%s\">Más info</a>"
