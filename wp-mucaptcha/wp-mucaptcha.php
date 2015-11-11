@@ -13,8 +13,9 @@ function mucaptcha_add_scripts() {
   // Note: In Wordpress > 4.1 it seems conditional JS loading is possible.
   // For older WP versions let's use this tried-and-true approach.
   if ( preg_match('/MSIE [6-8]/', $_SERVER['HTTP_USER_AGENT']) ) {
-    wp_enqueue_script( 'json2', 'https://cdn.jsdelivr.net/json2/0.2/json2.min.js', array(), NULL, TRUE );
-    wp_enqueue_script( 'excanvas', 'https://cdn.jsdelivr.net/excanvas/r3/excanvas.compiled.js', array(), NULL, TRUE );
+    // Note: json2 is part of WordPress core.
+    wp_enqueue_script( 'json2' );
+    wp_enqueue_script( 'excanvas', plugin_dir_url(__FILE__) . 'js/excanvas.min.js' );
   }
   // Load the μcaptcha script.
   $key = get_option( 'mucaptcha_public_key' );
