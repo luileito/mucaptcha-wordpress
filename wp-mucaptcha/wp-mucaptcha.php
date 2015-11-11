@@ -110,8 +110,8 @@ function mucaptcha_verify() {
   // so ensure that the user has been shown a μcaptcha challenge.
   if ( isset( $_POST['mucaptcha-challenge'] ) ) {
     require 'class-mucaptcha.php';
-    $challenge = $_POST['mucaptcha-challenge'];
-    $strokes   = $_POST['mucaptcha-strokes'];
+    $challenge = sanitize_text_field( $_POST['mucaptcha-challenge'] );
+    $strokes   = sanitize_text_field( $_POST['mucaptcha-strokes'] );
     $secret    = get_option( 'mucaptcha_secret_key' );
     $referer   = site_url();
     $mucaptcha = new MuCAPTCHA( $secret, $referer );
