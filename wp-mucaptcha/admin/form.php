@@ -13,7 +13,7 @@
     </div>
   <?php endif; ?>
 
-  <form name="mucaptcha_form" method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+  <form name="mucaptcha_form" method="post" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>">
     <h4><?php _e( 'General settings', 'mucaptcha' ) ?></h4>
     <table class="form-table">
       <tr valign="top">
